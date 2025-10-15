@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janak Foundation</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div data-include="includes/header-fragment.html"></div>
+  <!-- ======= Volunteer Hero Section ======= -->
+  <section class="hero-section text-center  py-5" style="background: url('assests/images/volunteer (1).png') no-repeat center center; 
+                background-size: cover; 
+                color: none; ">
+    <div class="container">
+      <h1 class="display-5 text-dark">Join Us as a Volunteer</h1>
+      <p class="lead mt-3 text-dark">Make a difference in the lives of children and communities by contributing your
+        time and skills.</p>
+      <a href="#volunteerForm" class="btn btn-learn mt-3">Sign Up Now</a>
+    </div>
+  </section>
+
+  <!-- ======= Volunteer Info Section ======= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center mb-4">
+        <h2 class="fw-bold text-teal mb-3">Why Volunteer With Us?</h2>
+        <p class="text-dark">Your contribution matters. Together, we can empower communities, support education,
+          healthcare, and environmental initiatives.</p>
+      </div>
+
+      <div class="row g-4 text-center">
+        <div class="col-md-6 col-lg-3">
+          <div class="cause-card p-4 shadow-sm h-100">
+            <div class="icon mb-3"><i class="fa-solid fa-book-open"></i></div>
+            <h5 class="fw-semibold mb-2">Support Education</h5>
+            <p class="text-dark small">Help children access quality learning resources and mentorship to build a
+              brighter future.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="cause-card p-4 shadow-sm h-100">
+            <div class="icon mb-3"><i class="fa-solid fa-hand-holding-medical"></i></div>
+            <h5 class="fw-semibold mb-2">Healthcare Support</h5>
+            <p class="text-dark small">Assist in health awareness programs and medical camps for underprivileged
+              communities.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="cause-card p-4 shadow-sm h-100">
+            <div class="icon mb-3"><i class="fa-solid fa-leaf"></i></div>
+            <h5 class="fw-semibold mb-2">Environment</h5>
+            <p class="text-dark small">Participate in tree plantations, clean-up drives, and sustainability projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="cause-card p-4 shadow-sm h-100">
+            <div class="icon mb-3"><i class="fa-solid fa-people-group"></i></div>
+            <h5 class="fw-semibold mb-2">Community Support</h5>
+            <p class="text-dark small">Engage with local communities, helping in skill development and women empowerment
+              programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= Volunteer Form Section ======= -->
+  <section id="volunteerForm" class="py-5" style="background-color:#84ffed7d;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-teal">Volunteer With Us</h2>
+        <p class="text-dark">Fill out the form below to join our volunteer community and make a difference.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="volunteerFormElement" class="p-4 shadow-lg rounded ">
+
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required
+                autocomplete="name">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Gmail address"
+                pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required autocomplete="email">
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label for="phone" class="form-label fw-semibold">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone"
+                placeholder="Enter your 10-digit phone number" pattern="^[6-9]\d{9}$" required autocomplete="tel">
+            </div>
+
+            <!-- City -->
+            <div class="mb-3">
+              <label for="city" class="form-label fw-semibold">City / Location</label>
+              <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city or area"
+                required autocomplete="address-level2">
+            </div>
+
+            <!-- Area of Interest -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Area of Interest</label><br>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Education" id="education" name="interest">
+                <label class="form-check-label" for="education">Education</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="HealthCare" id="healthcare" name="interest">
+                <label class="form-check-label" for="healthcare">HealthCare</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Environment & Plantation" id="environment"
+                  name="interest">
+                <label class="form-check-label" for="environment">Environment & Plantation</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Food & Nutrition" id="food" name="interest">
+                <label class="form-check-label" for="food">Food & Nutrition</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Fundraising & Events" id="fundraising"
+                  name="interest">
+                <label class="form-check-label" for="fundraising">Fundraising & Events</label>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Availability</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Weekdays" id="weekdays" name="availability">
+                <label class="form-check-label" for="weekdays">Weekdays</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Weekends" id="weekends" name="availability">
+                <label class="form-check-label" for="weekends">Weekends</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="Flexible" id="flexible" name="availability">
+                <label class="form-check-label" for="flexible">Flexible</label>
+              </div>
+            </div>
+
+            <!-- Why Volunteer -->
+            <div class="mb-3">
+              <label for="why" class="form-label fw-semibold">Why do you want to volunteer with us?</label>
+              <textarea class="form-control" id="why" name="why" rows="3" placeholder="Tell us why you’d like to join"
+                required></textarea>
+            </div>
+
+            <!-- Skills -->
+            <div class="mb-3">
+              <label for="skills" class="form-label fw-semibold">Any special skills or experience?</label>
+              <textarea class="form-control" id="skills" name="skills" rows="3"
+                placeholder="List your relevant skills or experience"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-teal px-5 py-2 fw-semibold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Your Volunteer JS -->
+  <script src="volunteer.js"></script>
+
+  <!-- Footer Section -->
+  <div data-include="includes/footer-fragment.html"></div>
+  <script>
+    async function includeHTML() {
+      const els = document.querySelectorAll('[data-include]');
+      for (const el of els) {
+        const file = el.getAttribute('data-include');
+        try {
+          const res = await fetch(file);
+          if (!res.ok) throw new Error('Not found: ' + file);
+          const html = await res.text();
+          el.outerHTML = html;
+        } catch (err) {
+          console.warn('Include failed:', file, err);
+        }
+      }
+    }
+    includeHTML();
+     // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Optional: Disable some common key shortcuts (e.g., F12, Ctrl+Shift+I, Ctrl+U)
+  document.addEventListener('keydown', function(e) {
+    if (
+      e.key === 'F12' || // DevTools
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || // Inspect/Console
+      (e.ctrlKey && e.key === 'U') // View Source
+    ) {
+      e.preventDefault();
+    }
+  });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

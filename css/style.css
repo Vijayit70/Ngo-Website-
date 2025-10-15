@@ -1,0 +1,998 @@
+/* ===== NGO Website CSS ===== */
+/* Import a single site font (Poppins) for consistent rendering across pages */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  color: #111;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+  background-color: #e9e2c700;
+  line-height: 1.6;
+}
+
+
+* All paragraph text styling */
+p {
+  color: #111;              /* Deep neutral black (not harsh like #000) */
+  font-size: 1rem;          /* Standard readable size */
+  line-height: 1.6;         /* Comfortable spacing */
+  font-weight: 400;         /* Regular readable weight */
+  margin-bottom: 1em;       /* Space between paragraphs */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #0ea5a4; /* Teal color */
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #facc15 !important; /* Gold accent */
+}
+
+.btn-donate {
+  background-color: #facc15;
+  color: #0f172a;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 8px 20px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-donate:hover {
+  background-color: #ffe34e;
+}
+
+/* Fix for spacing under fixed navbar */
+body::before {
+  content: '';
+  display: block;
+  height: 70px;
+}
+
+/* ===== Jeevan Ki Nai Shuruaat Style Footer ===== */
+.jkss-footer {
+  background-color: #fff5eb;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+}
+
+.jkss-footer h5 {
+  color: #000;
+}
+
+.text-orange {
+  color: #ff9900;
+}
+
+.jkss-footer a {
+  color: #444;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.jkss-footer a:hover {
+  color: #ff9900;
+}
+
+.jkss-footer .social-links a img {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.jkss-footer .social-links a img:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* Social icon helper for font icons used in footer */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: none;
+  color: #facc15;
+  border-radius: 50%;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.social-icon i { font-size: 16px; }
+.social-icon:hover { background-color: #facc15; color: #0f172a; transform: translateY(-3px); }
+
+.jkss-footer hr {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Footer Bottom Dark Bar (Copyright Section) ===== */
+.footer-bottom-bar {
+  background-color: #1b1b1b;
+  color: #eaeaea;
+  font-size: 0.9rem;
+}
+
+/* Copyright bottom bar spacing */
+.footer-bottom-bar .footer-bottom-content {
+  display: inline-flex; /* fallback to inline behavior while enabling flex */
+  gap: 12px; /* space between year, rights, and maker */
+  align-items: center;
+  justify-content: center;
+}
+.footer-bottom-bar .fb-item {
+  display: inline-block;
+}
+
+@media (max-width: 576px) {
+  .footer-bottom-bar .footer-bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+.footer-bottom-bar .text-orange {
+  color: #ff9900;
+  font-weight: 500;
+}
+
+.footer-bottom-bar .text-orange:hover {
+  color: #ffaa33;
+  transition: 0.3s;
+}
+
+
+/* ===== Hero Section (No Background Image) ===== */
+.hero-section {
+  width: 100vw;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensure hero stays below the fixed header (70px). Add a small extra gap for breathing room. */
+  padding: calc(70px + 20px) 0;
+}
+
+/* (hero-bg removed) */
+
+/* Carousel hero slides */
+.hero-slide {
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(3,7,18,0.45); /* overlay for readability */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.carousel-caption h1, .carousel-caption p {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h1 { font-size: 1.6rem; }
+  .carousel-caption p { font-size: .95rem; }
+  .carousel-caption { padding: 0 1rem; }
+}
+
+.hero-section h1 {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section p {
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.btn-join {
+  background-color: #facc15;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-join:hover {
+  background-color: #ffe34e;
+  color: #0f172a;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #0ea5a4;
+}
+
+/* ======= Team Slider CSS ======= */
+
+/* Section Heading */
+#teamSlider{
+  background-color: aquamarine;
+}
+#teamSlider h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+/* Carousel Items */
+#teamSlider .carousel-item {
+    padding: 2rem 1rem;
+}
+
+/* Profile Image */
+#teamSlider .carousel-item img {
+    border: 5px solid #ffc107; /* yellow border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+#teamSlider .carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Name */
+#teamSlider .carousel-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Designation */
+#teamSlider .carousel-item p.text-warning {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Bio Paragraph */
+#teamSlider .carousel-item p.text-dark {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Carousel Controls */
+#teamSlider .carousel-control-prev-icon,
+#teamSlider .carousel-control-next-icon {
+    background-size: 100% 100%;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#teamSlider .carousel-control-prev,
+#teamSlider .carousel-control-next {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #teamSlider h1 {
+        font-size: 2rem;
+    }
+    #teamSlider .carousel-item p.text-dark {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+}
+/* Smaller arrows below the text */
+.team-slider-controls button {
+    width: 40px;   /* smaller width */
+    height: 40px;  /* smaller height */
+    padding: 0;    /* remove extra padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #3dff07; /* yellow background */
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.team-slider-controls button:hover {
+    transform: scale(1.1);
+}
+
+/* Make the arrow icon fill the button */
+.team-slider-controls .carousel-control-prev-icon,
+.team-slider-controls .carousel-control-next-icon {
+    width: 20px;  /* smaller icon */
+    height: 20px;
+    background-size: 100% 100%;
+}
+
+/* ===== About Section ===== */
+
+.about-section {
+  background-color: #f8fafc; /* light background */
+}
+
+/* About extra: two sliders */
+.about-extra {
+  background-color: #fff;
+}
+.about-slide-img {
+  height: 320px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-slide-img { height: 220px; }
+}
+
+/* Gallery card spacing */
+.gallery-card img {
+  margin-bottom: 12px;
+}
+.gallery-card h3 {
+  margin-top: 8px;
+}
+
+/* Text-only sidebar panels in About extra */
+.about-sidebar {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+}
+
+@media (max-width: 768px) {
+  .about-sidebar { padding: 1.25rem !important; }
+}
+
+.about-section h2 {
+  color: #0ea5a4;
+}
+
+.about-section p {
+  line-height: 1.7;
+}
+
+.btn-learn {
+  background-color: #0ea5a4;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 24px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-learn:hover {
+  background-color: #14b8a6;
+  color: #fff;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .about-section .col-lg-6 img {
+    width: 100%;
+  }
+}
+
+.about-left {
+  background-image: url('assets/images/hero-children.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px; /* adjust */
+  border-radius: .5rem;
+}
+
+/*=== slides section ===*/
+
+/* Carousel Container */
+#aboutSlider {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 60px 20px 100px 20px; /* extra bottom padding for arrows */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  position: relative;
+  text-align: center;
+}
+
+/* Headings and Text */
+#aboutSlider h1 {
+  color: #0ea5a4;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+}
+
+#aboutSlider h4 {
+  color: black;
+  font-weight: 600;
+}
+
+#aboutSlider p {
+  color: #01050c;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+#aboutSlider .carousel-item p {
+  color: #000 !important;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Remove default arrow absolute positioning */
+#aboutSlider .carousel-control-prev,
+#aboutSlider .carousel-control-next {
+  position: static;
+  width: auto;
+  height: auto;
+  top: auto;
+  transform: none;
+  margin: 20px 10px 0 10px; /* spacing between arrows */
+}
+
+/* Make arrows inline-flex horizontally */
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between prev and next */
+  margin-top: 20px;
+}
+
+/* Circle style for arrow background */
+#aboutSlider .carousel-control-prev span,
+#aboutSlider .carousel-control-next span {
+  background-color: #f59e0b;
+  border-radius: 50%;
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+
+#aboutSlider .carousel-control-prev:hover span,
+#aboutSlider .carousel-control-next:hover span {
+  background-color: #fbbf24;
+  transform: scale(1.05);
+}
+
+/* Make icons white */
+#aboutSlider .carousel-control-prev-icon,
+#aboutSlider .carousel-control-next-icon {
+  filter: invert(1);
+  background-size: 60%;
+}
+
+/* Optional: smooth fade transition */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+
+/* ===== Causes Section ===== */
+.text-teal {
+  color: #0ea5a4;
+}
+
+.btn-outline-teal {
+  border: 1px solid #0ea5a4;
+  color: #0ea5a4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-teal:hover {
+  background-color: #0ea5a4;
+  color: #fff;
+}
+
+.cause-card {
+  background-color: #fff;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cause-card .icon {
+  font-size: 2.5rem;
+  color: #0ea5a4;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cause-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cause-card:hover .icon {
+  transform: scale(1.1);
+  color: #facc15;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .cause-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== Gallery Section ===== */
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-card p {
+  color: #333;
+}
+
+.btn-outline-teal {
+  border: 1px solid #0ea5a4;
+  color: #0ea5a4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-teal:hover {
+  background-color: #0ea5a4;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .gallery-card img {
+    height: 180px;
+  }
+}
+
+/* ===== volunteer Section ===== */
+
+.btn-teal {
+  background-color: #0ea5a4;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-teal:hover {
+  background-color: #0b837f;
+  transform: scale(1.05);
+}
+
+#volunteerFormElement {
+  background-color: #edfd0e;  /* Change this color */
+  transition: all 0.4s ease;
+  border-radius: 15px;
+  padding: 2rem;
+  
+}
+
+#volunteerFormElement:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===== Contact Section ===== */
+.contact-card {
+  background-color: #fff;
+  border-radius: 14px;
+  transition: all 0.4s ease; /* smooth transition for all effects */
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* slightly bigger shadow */
+}
+
+.contact-card:hover {
+  transform: translateY(-10px); /* slightly higher lift */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* bigger shadow on hover */
+  background-color: #e0f7f6; /* subtle teal background on hover */
+}
+
+.contact-hero {
+    min-height: 600px; /* adjust as per design */
+    display: flex;
+    align-items: center; /* vertically centers text */
+    justify-content: center;
+    text-align: center;
+}
+
+
+.contact-card .icon {
+  font-size: 2rem;
+  color: #0ea5a4;
+  transition: all 0.4s ease;
+}
+
+.contact-card:hover .icon {
+  color: #a9f00f; /* darker teal icon on hover */
+}
+
+.contact-card h5 {
+  transition: color 0.4s ease;
+}
+
+.contact-card:hover h5 {
+  color: #af14de; /* change heading color on hover */
+}
+
+.text-teal {
+  color: #0ea5a4;
+}
+
+.btn-teal {
+  background-color: #0ea5a4;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-teal:hover {
+  background-color: #0b8b87;
+  transform: scale(1.05);
+}
+
+/* ===== Donate Section ===== */
+
+    
+
+/* 🌄 Banner Section */
+section.banner {
+  width: 100%;
+  height: 400px;
+  background: url("/assests/images/donate.jpg") center center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+section.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-bottom: 4px solid #f39c12;
+}
+
+/* 🧾 Card Styling */
+.donation-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Auto-height cards */
+.donation-card.auto-height {
+  height: auto !important;
+}
+
+/* QR card centered */
+.donation-card.qr-card {
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.donation-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.icon-text i {
+  color: #f39c12;
+  margin-right: 8px;
+}
+
+/* QR image */
+img.qr {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* Highlighted borders */
+.highlight-border {
+  border-top: 4px solid #f39c12;
+}
+.highlight-border.green {
+  border-top-color: #28a745;
+}
+.highlight-border.blue {
+  border-top-color: #0d6efd;
+}
+
+/* Why Section */
+.why-section {
+  max-width: 750px;
+  margin: 50px auto 30px;
+  text-align: center;
+  padding: 0 15px;
+}
+.why-section h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.why-section p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 🌐 Responsive Fixes */
+@media (max-width: 992px) {
+  section.banner {
+    height: 300px;
+  }
+  .donation-card {
+    padding: 20px;
+  }
+  .donation-card h2 {
+    font-size: 1.15rem;
+  }
+  img.qr {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.banner {
+    height: 250px;
+  }
+  .donation-card {
+    padding: 18px;
+  }
+  .donation-card h2 {
+    font-size: 1.1rem;
+  }
+  .donation-card p,
+  .donation-card li {
+    font-size: 0.95rem;
+  }
+  img.qr {
+    width: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  section.banner {
+    height: 200px;
+  }
+  .donation-card {
+    padding: 16px;
+  }
+  .donation-card h2 {
+    font-size: 1rem;
+  }
+  .donation-card p,
+  .donation-card li {
+    font-size: 0.9rem;
+  }
+  img.qr {
+    width: 140px;
+  }
+}
+
+/* ===== What We Do Section ===== */
+
+/* ===== What We Do Section ===== */
+section.what-we-do {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+/* Banner directly below navbar */
+section.what-we-do .banner {
+    width: 100vw; /* full viewport width */
+    height: 400px; /* fixed height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url("/assests/images/ngo_background.jpg") center center / cover no-repeat;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Overlay */
+section.what-we-do .banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Banner Heading */
+section.what-we-do .banner h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Section Paragraph */
+.work-description p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 20px auto 0 auto; /* spacing below banner */
+    color: #01050c;
+    text-align: center;
+}
+
+/* Cards */
+.what-we-do .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Card hover effect */
+.what-we-do .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Headings */
+.what-we-do .card h5 {
+    font-weight: 700;
+    color: #0ea5a4;
+    margin-bottom: 15px;
+}
+
+/* Card Text */
+.what-we-do .card p {
+    flex-grow: 1;
+    color: #01050c;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Small Donate Button bottom-left */
+.btn-donate {
+    background-color: #f59e0b;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-weight: 600;
+    align-self: flex-start;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+/* Donate button hover effect */
+.btn-donate:hover {
+    background-color: #fbbf24;
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Remove extra spacing from body pseudo-element */
+body::before {
+    height: 0;
+}
+
+
+/* Responsive Banner Heights */
+@media (max-width: 992px) {
+    section.what-we-do .banner {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.what-we-do .banner {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    section.what-we-do .banner {
+        height: 180px;
+    }
+}
